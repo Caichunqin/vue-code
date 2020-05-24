@@ -1,0 +1,17 @@
+@mixin btnBox($width, $topTargin,$bottomMargin) {
+  width: $width;
+  margin: $topTargin auto $bottomMargin;
+}
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin width($width) {
+  width: $width;
+}
+@mixin height($height) {
+  height: $height;
+}
+@mixin  fontSize($size) {
+  font-size: $size
+}

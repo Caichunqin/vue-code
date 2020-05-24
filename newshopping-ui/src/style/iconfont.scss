@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../assets/font/iconfont.ttf') format('truetype');
+}
+
+.icon {
+  font-family: 'iconfont';
+  font-style: normal;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-sort:before {
+  content: "\e786";
+}
+
+.icon-zhifubao:before {
+  content: "\e64f";
+}
+
+.icon-explore:before {
+  content: "\e616";
+}
+
+.icon-weixin:before {
+  content: "\e637";
+}
+
+.icon-search:before {
+  content: "\e604";
+}
+
+.icon-setting:before {
+  content: "\e605";
+}
+
+.icon-self:before {
+  content: "\e6dc";
+}
+
+.icon-home:before {
+  content: "\e6ea";
+}

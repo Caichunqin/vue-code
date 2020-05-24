@@ -1,0 +1,29 @@
+@import '../mixin';
+.set-IDcard {
+  @include height(100%);
+  background: $background-color;
+  .ID_card{
+    @include width(70px);
+    flex: inherit;
+  }
+  .uploader_box {
+    padding: 40px 15px;
+  }
+  .label-company {
+    @include width(130px);
+    flex: inherit;
+  }
+ .uploader{
+    @include width(85%);
+    .van-uploader__upload{
+      @include box(95px, 62px)
+    }
+  }
+  .submit {
+    @include btnBox(90%,100px,100px);
+    padding-bottom: 20px;
+  }
+}
+.submit_btn_box {
+  @include btnBox(90%,20px,20px); 
+}

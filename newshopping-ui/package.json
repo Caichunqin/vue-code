@@ -1,0 +1,43 @@
+{
+  "name": "newshopping-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && gulp"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "compressorjs": "^1.0.5",
+    "core-js": "^2.6.5",
+    "lodash": "^4.17.15",
+    "signature_pad": "^3.0.0-beta.3",
+    "vant": "^2.2.14",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuedraggable": "^2.23.2",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.11.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-fez-sftp": "^1.0.1",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/oldeast_383482684_admin/newshopping-ui.git"
+  }
+}

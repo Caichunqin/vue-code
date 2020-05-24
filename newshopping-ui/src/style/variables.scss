@@ -1,0 +1,48 @@
+// color variables
+$black: #000;
+$white: #fff;
+$red: #f44;
+$blue: #1989fa;
+$orange: #ff976a;
+$orange-dark: #ed6a0c;
+$orange-light: #fffbe8;
+$green: #07c160;
+$gray: #c9c9c9;
+$gray-light: #e5e5e5;
+$gray-darker: #7d7e80;
+$gray-dark: #969799;
+
+// default colors
+$text-color: #323233;
+$border-color: #ebedf0;
+$active-color: #f2f3f5;
+$background-color: #f8f8f8;
+$background-color-light: #fafafa;
+$password-color:#A9A9A9 ;
+$remark-color:#bbb;
+$tag: #108EE9;
+// color collection
+$color: (
+  black: $black,
+  white: $white,
+  red: $red,
+  blue: $blue,
+  orange: $orange,
+  'orange-dark': $orange-dark,
+  'orange-light': $orange-light,
+  green: $green,
+  gray: $gray,
+  'gray-light': $gray-light,
+  'gray-darker': $gray-darker,
+  'gray-dark': $gray-dark,
+  'text-color': $text-color,
+  'border-color': $border-color,
+  'active-color': $active-color,
+  'background-color': $background-color,
+  'background-color-light': $background-color-light,
+  'password-color': $password-color,
+  'remark-color': $remark-color
+);
+
+// size variables
+$edge: 15px;

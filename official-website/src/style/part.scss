@@ -1,0 +1,249 @@
+@import './variables.scss';
+
+$position: (t: top, r: right, b: bottom, l: left);
+$box: (p: padding, m: margin);
+
+// color
+// .c-c-[ blue | indigo | ... ]
+@each $name, $value in $colors {
+  .c-c-#{$name} {
+    color: $value;
+  }
+}
+
+// background-color
+// .c-bc-[ blue | indigo | ... ]
+@each $name, $value in $colors {
+  .c-bc-#{$name} {
+    background-color: $value;
+  }
+}
+
+// text-align
+.c-ta-c {
+  text-align: center;
+}
+
+.c-ta-l {
+  text-align: left;
+}
+
+.c-ta-r {
+  text-align: right;
+}
+
+// font-weight
+.c-fw-b {
+  font-weight: bold;
+}
+
+.c-fw-n {
+  font-weight: normal;
+}
+
+// font-size
+// .c-fs-[ 10 - 40 ]
+@for $i from 10 through 40 {
+  .c-fs-#{$i} {
+    font-size: $i * 1px;
+  }
+}
+
+// height, line-height
+// .c-h-[ 12 | 16 | 20 | 24 | 28 | ...... | 80 ]
+// .c-lh-[ 12 | 16 | 20 | 24 | 28 | ...... | 80 ]
+@for $i from 3 through 20 {
+  .c-h-#{$i * 4} {
+    height: $i * 4px;
+  }
+  .c-lh-#{$i * 4} {
+    line-height: $i * 4px;
+  }
+}
+
+.c-h-100 {
+  height: 100%;
+}
+
+.c-h-100v {
+  height: 100vh;
+}
+
+.c-w-100 {
+  width: 100%;
+}
+
+.c-w-100v {
+  width: 100vw;
+}
+
+.c-w-a {
+  width: auto;
+}
+
+// margin, padding
+// .c-[ m | p ]
+// .c-[ m | p ]-[ 5 | 10 | 15 | ...... | 100 ]
+// .c-[ (m | p) + (t | r | b | l | lr | tb) ]
+// .c-[ (m | p) + (t | r | b | l | lr | tb) ]-[ 5 | 10 | 15 | ...... | 100 ]
+$baseSize: 15;
+@for $i from 1 through 20 {
+  @each $bShort, $bLong in $box {
+    @each $pShort, $pLong in $position {
+      .c-#{$bShort + $pShort}-#{$i * 5} {
+        #{$bLong}-#{$pLong}: $i * 5px;
+      }
+      .c-#{$bShort + $pShort} {
+        @extend .c-#{$bShort + $pShort}-#{$baseSize};
+      }
+    }
+    .c-#{$bShort + lr}-#{$i * 5} {
+      @extend .c-#{$bShort + l}-#{$i * 5};
+      @extend .c-#{$bShort + r}-#{$i * 5};
+    }
+    .c-#{$bShort + lr} {
+      @extend .c-#{$bShort + lr}-#{$baseSize};
+    }
+    .c-#{$bShort + tb}-#{$i * 5} {
+      @extend .c-#{$bShort + t}-#{$i * 5};
+      @extend .c-#{$bShort + b}-#{$i * 5};
+    }
+    .c-#{$bShort + tb} {
+      @extend .c-#{$bShort + tb}-#{$baseSize};
+    }
+    .c-#{$bShort}-#{$i * 5} {
+      @extend .c-#{$bShort + lr}-#{$i * 5};
+      @extend .c-#{$bShort + tb}-#{$i * 5};
+    }
+    .c-#{$bShort} {
+      @extend .c-#{$bShort}-#{$baseSize};
+    }
+  }
+}
+
+.c-br-50 {
+  border-radius: 50%;
+}
+
+// border
+.c-b {
+  border-style: solid;
+  border-color: $border-color;
+  border-width: 1px;
+}
+
+// .c-b-[ t | r | b | l ]
+@each $pShort, $pLong in $position {
+  .c-b-#{$pShort} {
+    border-#{$pLong}-style: solid;
+    border-#{$pLong}-color: $border-color;
+    border-width: 1px;
+  }
+}
+//- border end -//
+
+.c-o-h {
+  overflow: hidden;
+}
+
+.c-eps {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  @extend .c-o-h;
+}
+
+// flex
+.c-d-f {
+  display: flex;
+}
+
+.c-f-1 {
+  flex: 1;
+}
+
+.c-fw-w {
+  flex-wrap: wrap;
+}
+
+.c-fd-c {
+  flex-direction: column;
+}
+
+.c-f-a {
+  flex: 0 0 auto;
+}
+
+.c-jc-sb {
+  justify-content: space-between;
+}
+
+.c-jc-sa {
+  justify-content: space-around;
+}
+
+.c-jc-c {
+  justify-content: center;
+}
+
+.c-jc-fs {
+  justify-content: flex-start;
+}
+
+.c-jc-fe {
+  justify-content: flex-end
+}
+
+.c-ai-c {
+  align-items: center;
+}
+
+.c-noshrink {
+  flex-shrink: 0;
+}
+
+.c-flex {
+  @extend .c-d-f;
+  @extend .c-jc-sb;
+  @extend .c-ai-c;
+}
+
+.c-flex-child-center {
+  @extend .c-d-f;
+  @extend .c-ai-c;
+  @extend .c-jc-c;
+}
+//- flex end -//
+
+// display
+.c-d-b {
+  display: block;
+}
+
+.c-d-i {
+  display: inline;
+}
+
+.c-d-ib {
+  display: inline-block;
+}
+//- display end -//
+
+// position
+.c-p-r {
+  position: relative;
+}
+
+.c-p-a {
+  position: absolute;
+}
+
+.c-p-f {
+  position: fixed;
+}
+//- position end -//
+
+.c-mlr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
