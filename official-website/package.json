@@ -27,7 +27,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-fez-sftp": "^1.0.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
   }
